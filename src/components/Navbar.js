@@ -3,7 +3,7 @@ import desktopLogo from "../Assets/Logo/Full/Horizontal/Color-white.png";
 
 function Navbar() {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light bg-dark">
+    <nav className="navbar sticky-top navbar-expand-lg navbar-light bg-dark">
       <div className="container-fluid">
         <a className="navbar-brand" href="#">
           <img

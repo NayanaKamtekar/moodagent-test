@@ -5,7 +5,7 @@ import TextDescription from "./components/TextDescription";
 import deskBackground from "./Assets/Device Image/Desktop player.png" 
 import "./styles/styles.css";
 
-const points = [
+const points1 = [
   {
     type: "text",
     content: "Download the Moodagent app here",
@@ -13,6 +13,22 @@ const points = [
   {
     type: "buttons",
     content: ["Install", ],
+  },
+  {
+    type: "text",
+    content: "Follow the on-screen instructions to create your account",
+  },
+];
+
+
+const points2 = [
+  {
+    type: "text",
+    content: "Download the Moodagent app here",
+  },
+  {
+    type: "buttons",
+    content: ["macOS", "Windows"],
   },
   {
     type: "text",
@@ -33,13 +49,27 @@ function App() {
                 header="Getting Started"
                 subHeader="Moodagent on mobile:"
               />
-              <PointList points={points}/>
+              <PointList points={points1}/>
             </div>
             <div className="col back-img min-vh-100 d-flex flex-wrap align-items-center">
               <ImageCol imgSrc={deskBackground}/>
             </div>
           </div>
         </div>
+
+        <div className="container-fluid mt-5">
+          <div className="row justify-content-start">
+          <div className="col back-img min-vh-100 d-flex flex-wrap align-items-center">
+              <ImageCol imgSrc={deskBackground}/>
+            </div>
+            <div className="col">
+            <TextDescription
+                header="Moodagent on desktop:"
+              />
+              <PointList points={points2}/>
+            </div>
+          </div>
+        </div>        
       </div>
     </div>
   );
